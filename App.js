@@ -16,11 +16,23 @@ async function createTable() {
   })
 }
 
+async function insertInTableData(){
+  db.transaction((txn) => {
+    txn.executeSql(
+      `INSERT INTO usuarios (nome, idade) VALUES (Victor, 10)`, 
+      [],
+      (res) => {console.log("Sucesso")},
+      (error) => {console.log(error)}
+    )
+  })
+}
+
 export default function App() {
   return (
     <View style={styles.container}>
       <StatusBar style="auto" />
       <Button title='Criar Tabela' onPress={createTable}/>
+      <Button title='Insert Tabela' onPress={insertInTableData}/>
     </View>
   );
 }
