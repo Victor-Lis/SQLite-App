@@ -27,12 +27,29 @@ async function insertInTableData(){
   })
 }
 
+
+async function getTableData(){
+  db.transaction((txn) => {
+    txn.executeSql(
+      `SELECT * FROM usuarios`, 
+      [],
+      (res) => {
+        console.log("Sucesso")
+        let len = res.rows.length
+        console.log(len)
+      },
+      (error) => {console.log("Error in get Data")}
+    )
+  })
+}
+
 export default function App() {
   return (
     <View style={styles.container}>
       <StatusBar style="auto" />
       <Button title='Criar Tabela' onPress={createTable}/>
       <Button title='Insert Tabela' onPress={insertInTableData}/>
+      <Button title='Ler Tabela' onPress={getTableData}/>
     </View>
   );
 }
