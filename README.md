@@ -4,6 +4,9 @@ O intuito desse App é entender melhor o uso do SQLite, já que para React Nativ
 
 Porém como uma das atividades do meu curso Técnico em DS é desenvolver um App usando SQLite, aceitei o desafio!
 
-## Autores
+## Expo-SQLite
 
+Em uma pesquisa superficial encontrei o expo SQLite, então aproveitei para ler as [documentações](https://docs.expo.dev/versions/latest/sdk/sqlite/), estão sendo trabalhosas e o resultado não está vindo, porém seguirei investindo, se ao fim não for possível desenvolver irei migrar para outra lib...
+
+## Autores
 - [@Victor-Lis](https://github.com/Victor-Lis)
